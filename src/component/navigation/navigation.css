@@ -1,0 +1,19 @@
+.nav_block {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  height: 250px;
+  border: 1px solid black;
+}
+.nav_block input {
+  width: 350px;
+  height: 20px;
+}
+.nav_input_param {
+  display: flex;
+  align-items: center;
+}
+.nav_input_param h3 {
+  margin: 15px;
+}
