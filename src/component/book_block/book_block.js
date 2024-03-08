@@ -1,10 +1,6 @@
 import { useState, useEffect } from "react";
 
-export function BookBlock() {
-  const categorie = "categorie";
-  const bookName = "book name";
-  const authorName = "author name";
-
+export function BookBlock({ categorie, bookName, authorName }) {
   return (
     <div className="bookblock">
       <img></img>

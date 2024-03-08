@@ -1,9 +1,14 @@
 import { useState, useEffect } from "react";
+import { RequestApi } from "../RequestApi.js";
 
 export function Navigation() {
   const [value, setValue] = useState("");
   const [categorie, setCategorie] = useState("all");
   const [sortby, setSortby] = useState("relevance");
+
+  function handleSubmit(event) {
+    event.preventDefault();
+  }
 
   return (
     <div className="nav_block">
@@ -29,13 +34,13 @@ export function Navigation() {
           <option value="newest">Newest</option>
         </select>
       </div>
+      <RequestApi
+        requestValue={{
+          requestResult: value,
+          requestCategorie: categorie,
+          requestSortby: sortby,
+        }}
+      />
     </div>
   );
-
-  function handleSubmit(event) {
-    event.preventDefault();
-    console.log(value);
-    console.log(categorie);
-    console.log(sortby);
-  }
 }

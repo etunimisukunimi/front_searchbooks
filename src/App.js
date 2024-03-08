@@ -6,11 +6,20 @@ import { BookBlock } from "./component/book_block/book_block.js";
 import "./component/book_block/book_block.css";
 
 function App() {
+  const items = [{ categorie: "1", bookName: "1231", authorName: "1" }];
+
   return (
     <div className="App">
       <Navigation />
       <Amount />
-      <BookBlock />
+      {items.map(({ categorie, bookName, authorName }) => (
+        <BookBlock
+          key={bookName}
+          categorie={categorie}
+          bookName={bookName}
+          authorName={authorName}
+        />
+      ))}
     </div>
   );
 }
