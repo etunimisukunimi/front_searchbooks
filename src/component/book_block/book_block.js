@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 
-export function BookBlock({ categorie, bookName, authorName }) {
+export function BookBlock({ categorie, bookName, authorName, imageLink }) {
   return (
     <div className="bookblock">
-      <img></img>
-      <a href="#">{categorie}</a>
-      <h3>{bookName}</h3>
-      <h5>{authorName}</h5>
-    </div>
+        <img src={imageLink}></img>
+        {categorie} <br/>
+        {bookName} <br/>
+        {authorName} <br/>
+      </div>
   );
 }

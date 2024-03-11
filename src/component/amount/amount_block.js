@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react";
 
-export function Amount() {
-  const result = '5';
+export function Amount({ totalAmount }) {
   return (
     <div className="amount_block">
-      <h4>Found {result} results</h4>
+      <h4>Found {totalAmount.totalItems} results</h4>
     </div>
   );
 }

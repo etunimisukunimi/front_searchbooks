@@ -1,13 +1,25 @@
 import { useState, useEffect } from "react";
-import { RequestApi } from "../RequestApi.js";
 
-export function Navigation() {
+export function Navigation({ settotalAmount, setbooksInfo }) {
+  const apiKey = "AIzaSyBmF8nKocVef4--531HHOUyFMM23U84dgE";
+
   const [value, setValue] = useState("");
   const [categorie, setCategorie] = useState("all");
   const [sortby, setSortby] = useState("relevance");
 
   function handleSubmit(event) {
     event.preventDefault();
+    const bookSearchResult = fetch(
+      `https://www.googleapis.com/books/v1/volumes?q=${value}+subject${categorie}&orderBy=${sortby}&key=` +
+        apiKey
+    );
+
+    bookSearchResult
+      .then((response) => response.json())
+      .then((data) => {
+        settotalAmount(data);
+        setbooksInfo(data);
+      });
   }
 
   return (
@@ -34,13 +46,6 @@ export function Navigation() {
           <option value="newest">Newest</option>
         </select>
       </div>
-      <RequestApi
-        requestValue={{
-          requestResult: value,
-          requestCategorie: categorie,
-          requestSortby: sortby,
-        }}
-      />
     </div>
   );
 }
