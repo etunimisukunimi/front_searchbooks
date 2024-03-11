@@ -5,7 +5,6 @@ import { BookBlock } from "./component/book_block/book_block.js";
 import "./component/book_block/book_block.css";
 import { Amount } from "./component/amount/amount_block.js";
 import "./component/amount/amount_block.css";
-import "./app.css";
 
 function App() {
   const [totalAmount, settotalAmount] = useState("~");
