@@ -17,3 +17,8 @@
 .nav_input_param h3 {
   margin: 15px;
 }
+.divClassTest {
+  width: 150px;
+  height: 150px;
+  border: 1px solid black;
+}
