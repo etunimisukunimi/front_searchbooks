@@ -9,7 +9,7 @@ export function Navigation({ settotalAmount, setbooksInfo, setfetchValue }) {
   function handleSubmit(event) {
     event.preventDefault();
     const bookSearchResult = fetch(
-      `https://www.googleapis.com/books/v1/volumes?q=${value}${categorie}&orderBy=${sortby}&maxResults=30&startIndex=0&key=` +
+      `https://www.googleapis.com/books/v1/volumes?q=${value}${categorie}&orderBy=${sortby}&maxResults=28&startIndex=0&key=` +
         apiKey
     );
     bookSearchResult

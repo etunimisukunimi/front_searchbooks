@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 
 export function MoreButton({ setbooksInfo, fetchValue }) {
-  const [startIndex, setstartIndex] = useState(30);
+  const [startIndex, setstartIndex] = useState(28);
   function handleClick() {
-    setstartIndex(startIndex + 30);
+    setstartIndex(startIndex + 28);
     const bookSearchResult = fetch(
-      `https://www.googleapis.com/books/v1/volumes?q=${fetchValue.value}${fetchValue.categorie}&orderBy=${fetchValue.sortby}&maxResults=30&startIndex=${startIndex}&key=` +
+      `https://www.googleapis.com/books/v1/volumes?q=${fetchValue.value}${fetchValue.categorie}&orderBy=${fetchValue.sortby}&maxResults=28&startIndex=${startIndex}&key=` +
         fetchValue.apiKey
     );
     bookSearchResult
@@ -16,7 +16,7 @@ export function MoreButton({ setbooksInfo, fetchValue }) {
             return { items: [...items, ...data.items] };
           });
         }
-      console.log(data)
+
       });
   }
 

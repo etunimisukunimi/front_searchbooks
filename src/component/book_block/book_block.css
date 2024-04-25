@@ -6,7 +6,16 @@
   height: 400px;
   flex-direction: column;
   align-items: center;
+  margin: 15px;
+  transform: scale(1);
+  transition:  .2s;
 }
+
+.bookblock:hover {
+  transform: scale(1.05);
+  transition:  .3s;
+}
+
 .bookblockImg {
   display: flex;
   width: 50%;
@@ -24,11 +33,8 @@
   width: 50%;
   height: 50%;
   flex-direction: column;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.bookblockInfo h4,
-span,
-p {
-  max-height: 90px;
-  overflow: hidden;
-}
+

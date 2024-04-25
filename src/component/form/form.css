@@ -1,4 +1,8 @@
 .nav_block {
+  color: white;
+  background-image: url(./book.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -8,17 +12,13 @@
 }
 .nav_block input {
   width: 350px;
-  height: 20px;
+  height: 16px;
 }
 .nav_input_param {
   display: flex;
   align-items: center;
 }
 .nav_input_param h3 {
-  margin: 15px;
-}
-.divClassTest {
-  width: 150px;
-  height: 150px;
-  border: 1px solid black;
+  margin-right: 15px;
+  margin-left: 15px; 
 }
